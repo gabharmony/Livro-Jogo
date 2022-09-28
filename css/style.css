@@ -1,9 +1,28 @@
-/* Não comecei o style ainda por estar básico */
-
 body{
-    background: #090808;
+    background: #f1f1f1;
 }
 
-nav{
-    background: #090808;
+.content-inicio{
+    position: relative;
+    background: url("../img/fundoTela.png");
+    width: 100%;
+    height: 100vh;
 }
+
+.content-sinopse{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.row{
+    width: 100%;
+}
+
+.nav-item{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
