@@ -1,46 +1,147 @@
-body{
+/* Estilo do body normal */
+.bg-classic{
     background: #f1f1f1;
 }
 
-.content-inicio{
+/* Estilo do body com modo escuro */
+.bg-dark{
+    color: #f1f1f1;
+}
+
+/* Estilo da Div Header */
+.header{
+    background: #090808;
+}
+
+/* Estilo da navbar que está no header */
+.nav.justify-content-between{
+    background: #090808 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+/* Estilo do Nome do livro jogo na navbar do header */
+a.navbar-brand{
+    margin-right: 10%;
+}
+
+/* Estilo do botão "Jogue Agora" */
+.btn-danger{
+    background-color: #B00000;
+    border-color: 2px solid #B00000;
+}
+
+/* Estilo do switch para ativar o Modo Escuro quando está desligado */
+#btnModoEscuro{
+    background-color: #494b4d;
+}
+
+/* Estilo do switch para ativar o Modo Escuro quando está ligado */
+#btnModoEscuro:checked{
+    background-color: #d9d9d9;
+    border-color: #090808;
+}
+
+/* Estilo do switch para ativar o Alto Contraste quando está desligado */
+#btnAltoContraste{
+    background-color: #862e2e;
+}
+
+/* Estilo do switch para ativar o Alto Contraste quando está ligado */
+#btnAltoContraste:checked{
+    background-color: #494b4d;
+    border-color: #090808;
+}
+
+/* Estilo das Divs com classe 'content' */
+.content{
     position: relative;
-    background: url("../img/fundoTela.png");
     width: 100%;
     height: 100vh;
     text-align: center;
 }
 
-.content-sinopse{
+/* Estilo da Div inicial da página com o fundo de cartas */
+.content.inicio{
+    background: url("../img/fundoTela.png");
+}
+
+/* Estilo da imagem de copas na Div inicial  */
+.img-inicio{
+    padding-top: 40vh;
+    mix-blend-mode: multiply;
+}
+
+/* Estilo padronizando as divs para o conteúdo sinopse, personagens e avaliações */
+.content.sinopse, .content.personagens{
     position: relative;
     padding-top: 50px;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
+    max-height: 90%;
 }
 
+/* Estilo da linha onde estão as divisões do menu lateral e conteúdo */
 .row{
     width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.nav-item{
-    margin-top: 15px;
-    margin-bottom: 15px;
+
+/* Estilo do menu lateral */
+.nav.flex-column{
+    position: relative;
+    width: 70%;
 }
 
+/* Estilo dos itens do menu lateral */
+.nav.nav.flex-column .nav-item{
+    margin: 15px 0;
+    left: 0;
+}
+
+/* Estilo dos botões do menu lateral */
 .nav-link{
     background: #d9d9d9 !important;
     color: #090808;
-    width: 90% !important;
+    width: 80% !important;
     border-radius: 0px !important;
 }
 
-.nav-link.active{
-    width: 100% !important;
-    background: #494b4d !important;
+/* Estilo para quando parar o mouse nos "botões" do menu lateral */
+.nav-link:hover{
+    color: #f1f1f1;
 }
 
-.img-inicio{
-    padding-top: 20vh;
-    mix-blend-mode: multiply;
+/* Estilo do botão do menu lateral atual */
+.nav-link.active{
+    width: 90% !important;
+    background: #494b4d !important;
+    color: #f1f1f1;
+}
+
+/* Estilo para quando parar o mouse no "botão" do menu lateral atual */
+.nav-link.active:hover{
+    color: #d9d9d9;
+}
+
+/* Estilo da Div com o texto do conteúdo de sinopse */
+.text-sinopse{
+    max-height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+/* Estilo da Div que iria conter o trailer da sinopse */
+.video-sinopse{
+    position: relative;
+    height: 50%;
+    width: 50%;
+    background: red;
 }
 

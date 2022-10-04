@@ -8,46 +8,106 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-classic">
     <!-- Eu gosto de trabalhar com divs, se não gostar pode alterar / Pensei também em usar bootstrap, tá só colocado os elementos, não mexi ainda... -->
     <!-- A Div content é para colocar todos os conteúdos separados por div -->
-    <div class="content">
+    <div class="header">
+
+      <ul class="nav justify-content-between bg-dark">
+        <li class="nav-item">
+          <div class="nav-acessibilidade">
+            <form class="d-flex" role="button">
+              <div class="form-check form-switch">
+                <!-- Botão para o Modo Escuro -->
+                <input class="form-check-input" type="checkbox" role="switch" id="btnModoEscuro">
+              </div>
+              <div class="form-check form-switch">
+                <!-- Botão para o Alto Contraste -->
+                <input class="form-check-input" type="checkbox" role="switch" id="btnAltoContraste">
+              </div>
+            </form>
+          </div>
+        </li>
+        <span class="navbar-brand mb-0 h1">Michele & Malik</span>
+        <li class="nav-item">
+          <form class="d-flex" role="button">
+            <button class="btn btn-danger" type="submit" id="btnJogar">Jogue Agora</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div class="content-principal">
       <!-- Conteúdo Inicial -->
-      <div class="content-inicio">
+      <div class="content inicio">
         <div class="container">
-          <img class="img-inicio" src="img/copas.png" alt="Copas">
+          <a href="#sinopse">
+            <img class="img-inicio" src="img/copas.png" alt="Copas">
+          </a>
         </div>
       </div>
       <!-- Conteúdo da Sinopse -->
-      <div class="content-sinopse">
-        <!-- Criei duas colunas. A  col-4 e col-8, lembrando que "-4" e "-8" se refere ao tamanho da coluna -->
+      <div class="content sinopse" id="sinopse">
+        <!-- Alterei as duas colunas. Agora são duas col-6 por conta da responsividade,lembrando que antes eram "col-4" e "col-8" -->
         <div class="row">
-          <div class="col-3">
-            <ul class="nav nav-pills nav-fill flex-column">
+          <!-- Menu da Lateral Esquerda -->
+          <div class="col-6 menu-lateral">
+            <ul class="nav flex-column">
                 <a class="navbar-brand" href="#">
-                  <img src="img/espadas.png" alt="Logo" width="223" height="203" class="d-inline-block align-text-top">
+                  <img src="img/espadas.png" alt="Logo" class="nav-img-naipe">
                 </a>
               <li class="nav-item">
-                <a class="nav-link active" href="#">SINOPSE</a>
+                <a class="nav-link active" href="#sinopse">SINOPSE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">PERSONAGENS</a>
+                <a class="nav-link" href="#personagens">PERSONAGENS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">AVALIAÇÕES</a>
+                <a class="nav-link" href="avaliacoes">AVALIAÇÕES</a>
               </li>
             </ul>
           </div>
-
-          <div class="col-9">
-            <div class="text-sinopse">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolores obcaecati blanditiis tempora modi iure laboriosam reiciendis officiis iste. Earum incidunt nesciunt culpa. Cupiditate nemo velit nulla quis ea impedit assumenda minus quia officia accusantium incidunt, officiis ab! At dolor sit, animi earum fugit consequuntur. Quam perferendis est rem quia quod, dignissimos ipsum soluta! Est temporibus quo impedit voluptatem sequi nesciunt vero quasi illo doloribus, error explicabo repellendus iste sed eligendi, ad enim autem ipsa optio, tempora nobis ducimus. Accusantium voluptatibus esse laudantium dolorem quae aut, sunt, enim deleniti harum sapiente similique sit. Natus dicta earum nihil exercitationem in quaerat ipsam asperiores, quidem soluta optio quam. Maxime id quisquam explicabo repellat praesentium doloribus, consectetur accusantium rem aliquam, deleniti eius ullam veritatis ea et quaerat, dolorem expedita tempora necessitatibus consequatur ratione accusamus? Reiciendis voluptate eveniet delectus quis in, obcaecati quibusdam facere non nisi magni laboriosam ex quia, distinctio facilis. Error, provident.</div>
-            <div class="video-sinopse"></div>
+          <!-- Conteúdo ao lado do menu lateral -->
+          <div class="col-6 conteudo-principal">
+            <div class="container">
+              <div class="text-sinopse">
+                <p class="p-sinopse">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolores obcaecati blanditiis tempora modi iure laboriosam reiciendis officiis iste. Earum incidunt nesciunt culpa. Cupiditate nemo velit nulla quis ea impedit assumenda minus quia officia accusantium incidunt, officiis ab! At dolor sit, animi earum fugit consequuntur. Quam perferendis est rem quia quod, dignissimos ipsum soluta! Est temporibus quo impedit voluptatem sequi nesciunt vero quasi illo doloribus, error explicabo repellendus iste sed eligendi, ad enim autem ipsa optio, tempora nobis ducimus. Accusantium voluptatibus esse laudantium dolorem quae aut, sunt, enim deleniti harum sapiente similique sit. Natus dicta earum nihil exercitationem in quaerat ipsam asperiores, quidem soluta optio quam. Maxime id quisquam explicabo repellat praesentium doloribus, consectetur accusantium rem aliquam, deleniti eius ullam veritatis ea et quaerat, dolorem expedita tempora necessitatibus consequatur ratione accusamus? Reiciendis voluptate eveniet delectus quis in, obcaecati quibusdam facere non nisi magni laboriosam ex quia, distinctio facilis. Error, provident.</p>
+              </div>
+              <div class="video-sinopse">text</div>
+            </div>
           </div>
-
         </div>
-
       </div>
-      <div class="content-personagens"></div>
+      <!-- Fim do conteúdo da sinopse -->
+
+      <!-- Conteúdo dos Personagens -->
+      <div class="content personagens" id="personagens">
+        <div class="row">
+          <!-- Menu da Lateral Esquerda -->
+          <div class="col-6 menu-lateral">
+            <ul class="nav flex-column">
+              <a class="navbar-brand" href="#">
+                <img src="img/ouros.png" alt="Logo" class="nav-img-naipe">
+              </a>
+              <li class="nav-item">
+                <a class="nav-link" href="#sinopse">SINOPSE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#personagens">PERSONAGENS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#avaliacao">AVALIAÇÕES</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Conteúdo ao lado do menu na lateral esquerda -->
+          <div class="col-6 conteudo-principal">
+            <div class="imgs-personagens">
+              <img src="img/michele.jpeg" alt="michele" class="d-inline w-50">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do conteúdo dos personagens -->
     </div>
     <!-- DIV para o rodapé -->
     <div class="footer">
