@@ -11,7 +11,7 @@
     <link href="css/historia.css" rel="stylesheet">
 </head>   
 <!-- Optei por iniciar com o modo escuro -->
-<body class="bg-dark">
+<body id="troca" class>
     <div class="header">
         <ul class="nav justify-content-between bg-dark">
           <li class="nav-item">
@@ -19,11 +19,11 @@
               <form class="d-flex" role="button">
                 <div class="form-check form-switch">
                   <!-- Botão para o Modo Escuro -->
-                  <input class="form-check-input" type="checkbox" role="switch" id="btnModoEscuro" checked>
+                  <input class="form-check-input" type="checkbox" role="switch" id="btnModoEscuro" onclick="modoEscuro()" checked>
                 </div>
                 <div class="form-check form-switch">
                   <!-- Botão para o Alto Contraste -->
-                  <input class="form-check-input" type="checkbox" role="switch" id="btnAltoContraste">
+                  <input class="form-check-input" type="checkbox" role="switch" id="btnAltoContraste" onclick="modoAltoContraste()">
                 </div>
               </form>
             </div>
