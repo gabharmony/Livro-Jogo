@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História | Michele & Malik</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/historia.css" rel="stylesheet">
+</head>   
+<!-- Optei por iniciar com o modo escuro -->
+<body class="bg-dark">
+    <div class="header">
+        <ul class="nav justify-content-between bg-dark">
+          <li class="nav-item">
+            <div class="nav-acessibilidade">
+              <form class="d-flex" role="button">
+                <div class="form-check form-switch">
+                  <!-- Botão para o Modo Escuro -->
+                  <input class="form-check-input" type="checkbox" role="switch" id="btnModoEscuro" checked>
+                </div>
+                <div class="form-check form-switch">
+                  <!-- Botão para o Alto Contraste -->
+                  <input class="form-check-input" type="checkbox" role="switch" id="btnAltoContraste">
+                </div>
+              </form>
+            </div>
+          </li>
+          <span class="navbar-brand mb-0 h1">Michele & Malik</span>
+          <li class="nav-item disabled">
+            <a href="#"></a>
+          </li>
+        </ul>
+    </div>
+    <!-- Div do conteúdo principal -->
+    <div class="container">
+        <div class="capitulos">
+            <!-- Aqui estou usando a classe content e abertura para fazer o estilo, em cada abertura de capitulo -->
+            <div class="content capitulo-1 abertura" id="capituloUm">
+                <div class="ident-capitulo">
+                    <h6>Capítulo 1</h6>
+                    <h3>Encontro</h3>
+                </div>
+                <!-- Fiz o botão para descer, mas se não for usar, beleza -->
+                <div class="continuar">
+                    <a href="#capituloUmHistoria" class="btn-continuar"><i class="bi bi-arrow-down"></i></a>
+                </div>
+            </div>
+            <!-- Toda história fica dentro dessa div que usa content e historia -->
+            <div class="content capitulo-1 historia" id="capituloUmHistoria">
+                <p>&nbsp; Michele chega em Bogotá para férias, usando um casaco de pele, botas de couro e sua mala da Gucci e um óculos para descanso. Ao chegar se depara com um homem Negro alto, com uma jaqueta antiga e com um belo sorriso claro, com sua mochila nas costas e um a mala de roupa e usando calça jeans preta apertada.
+                <br> &nbsp; Malik, a olha com desejo, mas com intenção de que ela não o veja olhando. Eles dois se olham, Malik tenta se aproximar. Mas passam reto.
+                <br> &nbsp; Michele caminha, e pede para seu taxista, que abra a porta:</p>
+                <p>&nbsp; - Abra a porta, para que eu possa entrar.</p>
+                <p>&nbsp; Ele sai do seu carro, com uma expressão brava, mas abre a porta.
+                <br>&nbsp; Ela entra e diz:</p>
+                <p>&nbsp; - Me leve ao Hotel Blacks.</p>
+                <p>&nbsp; Ele diz:</p>
+                <p>&nbsp; - É pra já madame.</p>
+                <p>&nbsp; Malik, está procurando algum lugar para ficar, está no balcão do aeroporto vendo folhetos de hotéis. Mas pensando na mulher que acabou de ver, com uma lembrança forte em sua mente, até que a balconista sugere:</p>
+                <p>&nbsp; - Senhor está procurando um hotel, vai ao Blacks é o melhor hotel da cidade.
+                <br>&nbsp; E ele diz surpreendido:</p>
+                <p>&nbsp; - Certo, obrigado</p>
+                <p>&nbsp; Malik então, caminha para fora do hotel e pega a sua moto, robusta de corrida, e acelera até o Hotel Blacks.</p>
+                <p>&nbsp; Ao chegar no hotel, Malik encontra novamente na recepção aquela mulher que no aeroporto, ficou encantado.</p>
+                <!-- A classe decisão é usada para alinhar os botões no meio -->
+                <div class="capitulo-1 decisao">
+                    <!-- Botão padrão para as escolhas -->
+                    <button type="button" class="btn btn-dark btn-escolhaUm" id="btnCapUmEscolhaUm">Falar com a Michele</button>
+                    <button type="button" class="btn btn-danger btn-escolhaDois" id="btnCapDoisEscolhaDois">Não falar com Michele</button>
+                </div>
+            </div>
+            <!-- Aqui eu usei a classe escolha para alinhar o texto a esquerda, além de usar a content também -->
+            <div class="content capitulo-1 escolha escolhaUm" id="CapituloUmEscolhaUm">
+                <p>&nbsp; Malik vai até a moça e diz:</p> 
+                <p>&nbsp; - Olá, tudo bem?</p>
+                <p>&nbsp; Michele responde:- Oi, como vai ?</p>
+                <p>&nbsp; - Oi, como vai?</p>
+                <p>&nbsp; - Estou ótimo, obrigado por perguntar</p>
+                <p>&nbsp; - Já fez seu check-in ? </p>
+                <p>&nbsp; Michele então responde:</p>
+                <p>&nbsp; - Sim, Mas estou com muita pressa, precisa ir para o meu quarto, até mais - tímida e com vergonha.</p>
+                <p>&nbsp; Em sua passagem até a recepção, ela vê um passaporte no chão e chama rapidamente o homem, gritando "Senhor!", repetidas vezes. Malik recolhe seu Passaporte, agradece e sobe para sua suíte.</p>
+                <p>&nbsp; Michelle ainda pensando naquele homem que realizou o check in na recepção do hotel. Então sobe para o seu quarto e observa a vista maravilhosa enquanto ainda continua pensando nele</p>
+                <div class="continuar">
+                    <a href="#capituloDoisHistoria" class="btn-continuar"><i class="bi bi-arrow-down"></i></a>
+                </div>
+            </div>
+            <div class="content capitulo-1 escolha escolhaDois" id="CapituloUmEscolhaDois">
+                <p>&nbsp; Malik vai até o bar, e pedi whisky com gelo. Aproveita e pergunta ao Barman:</p> 
+                <p>&nbsp; - Você conhece aquela moça na recepção?</p>
+                <p>&nbsp; E o Barman responde:</p>
+                <p>&nbsp; - Não a conheço, só sei que chegou hoje e está fazendo o check-in, parece ser uma pessoa tímida e meiga</p>
+                <p>&nbsp; Após o senhor senhor,malik olha para trás,e vê aquele bela mulher,com o seu passaporte na mão e diz:</p>
+                <p>&nbsp; - Pois não</p>
+                <div class="continuar">
+                    <a href="#capituloDoisHistoria" class="btn-continuar"><i class="bi bi-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

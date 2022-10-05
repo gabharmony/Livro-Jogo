@@ -1,0 +1,96 @@
+/* Criei esse CSS para a página da história, para não inviabilizar o outro css */
+
+/* Estilo do body normal */
+.bg-classic{
+    background: #f1f1f1;
+    overflow: hidden;   
+    /* O Overflow que não deixa a página rolar para baixo. */
+}
+
+/* Estilo Modo Escuro */
+.bg-dark{
+    background: #090809 !important;
+    color: #f1f1f1;
+    overflow: auto;
+}
+
+span.navbar-brand{
+    margin-right: 80px;
+}
+
+/* Estilo da Div do Conteúdo Principal */
+.content{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+ }
+
+ /* Estilo para as Divs que iram apresentar o capitulo */
+ .abertura{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+ }
+
+/* Estilo do botão para continuar a ler, que é a nossa setinha pra baixo. */
+ .btn-continuar{
+    color: #f1f1f1;
+    font-size: 27px;
+ }
+
+ .btn-continuar:hover{
+    color: #B00000;
+ }
+
+
+ /* Estilo da Div, onde está o botão para continuar */
+ .continuar{
+    position: relative;
+    top: 40%;
+ }
+
+ /* Estilo da Div onde está a história principal, antes das escolhas no caso */
+ .historia{
+    padding-top: 60px;
+    text-align: left;
+ }
+
+ /* Estilo das Divs onde estão os botãos da escolha */
+ .decisao{
+    text-align: center;
+ }
+
+ /* Estilo das Divs onde estão as continuações a depender da escolha  */
+ .escolha{
+    text-align: left;
+    position: relative;
+ }
+
+ /* Estilo das Divs onde está o botão para continuar a ler, quando está dentro da continuação após escolha */
+ .escolha .continuar{
+    top: 0;
+    text-align: center;
+ }
+
+/* Estilos de responsividade */
+ @media screen and (max-width: 767.98px){
+    .historia{
+        overflow: scroll;
+    }
+
+    .escolhas{
+        margin-bottom: 20px;
+    }
+ }
+
+ @media screen and (max-height: 700px){
+    .historia{
+        overflow: scroll;
+    }
+
+    .escolhas{
+        margin-bottom: 20px;
+    }
+ }

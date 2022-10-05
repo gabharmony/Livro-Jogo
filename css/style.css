@@ -1,11 +1,13 @@
 /* Estilo do body normal */
 .bg-classic{
     background: #f1f1f1;
+    overflow-x: hidden;
 }
 
 /* Estilo do body com modo escuro */
 .bg-dark{
     color: #f1f1f1;
+    overflow-x: hidden;
 }
 
 /* Estilo da Div Header */
@@ -24,11 +26,6 @@
     position: fixed;
     top: 0;
     z-index: 4;
-}
-
-/* Estilo do Nome do livro jogo na navbar do header */
-a.navbar-brand{
-    margin-right: 10%;
 }
 
 /* Estilo do botão "Jogue Agora" */
@@ -65,7 +62,7 @@ a.navbar-brand{
     width: 100%;
     height: 100vh;
     text-align: center;
-}
+ } 
 
 /* Estilo da Div inicial da página com o fundo de cartas */
 .content.inicio{
@@ -79,24 +76,27 @@ a.navbar-brand{
 }
 
 /* Estilo padronizando as divs para o conteúdo sinopse, personagens e avaliações */
-.content.sinopse, .content.personagens{
+.content.sinopse, .content.personagens, .content.avaliacoes{
     position: relative;
     padding-top: 50px;
-    max-height: 90%;
 }
 
 /* Estilo da linha onde estão as divisões do menu lateral e conteúdo */
 .row{
     width: 100%;
-    height: 100%;
+    max-height: 95%;
     position: relative;
 }
 
+/* Estilo da Imagem do menu lateral */
+a.navbar-brand{
+    margin-right: 15%;
+}
 
 /* Estilo do menu lateral */
 .nav.flex-column{
     position: relative;
-    width: 70%;
+    width: 85%;
 }
 
 /* Estilo dos itens do menu lateral */
@@ -132,16 +132,159 @@ a.navbar-brand{
 
 /* Estilo da Div com o texto do conteúdo de sinopse */
 .text-sinopse{
+    margin-top: 15px;
     max-height: 50%;
     width: 100%;
     position: relative;
+    text-align: left;
 }
 
 /* Estilo da Div que iria conter o trailer da sinopse */
 .video-sinopse{
     position: relative;
-    height: 50%;
+    max-height: 50%;
     width: 50%;
-    background: red;
+    color: #f1f1f1;
+    background: #090808;
 }
 
+.imgs-personagens{
+    margin-top: 10px;
+    display: flex;
+    width: 99%;
+    height: max-content;
+}
+
+.img-personagem{
+    margin-right: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.sobre-personagem{
+    margin-left: 18px;
+}
+
+.content.avaliacoes a.navbar-brand{
+    margin-right: 16%;
+}
+
+.avaliacao-usuario{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.img-user{
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+}
+
+.content.avaliacoes .info-usuario{
+    text-align: left;
+}
+
+.info-usuario{
+    margin-top: 20px;
+}
+
+.info-usuario .nome-user h6{
+    font-size: 18px;
+}
+
+.comentario-user h6{
+    margin-top: 5px;
+}
+
+.posterior{
+    margin-top: 10px;
+}
+
+.content.avaliacoes{
+    height: max-content;
+}
+
+.footer{
+    position: relative; 
+    background: #090808;
+    height: 200px;
+    bottom: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  } 
+
+/* Estilo a ser usado para responsividade*/
+@media screen and (max-width: 767.98px){
+    .menu-lateral, .conteudo-principal{
+        width: 50%;
+    }
+
+    .content.sinopse, .content.avaliacoes{
+        position: relative;
+        height: max-content !important;
+    }
+
+    .content.personagens{
+        height: 82vh;
+    }
+
+    .video-sinopse{
+        position: relative;
+        max-height: 50%;
+        width: 90%;
+        background: red;
+    }
+
+    .imgs-personagens{
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30% !important;
+        width: 95% !important;
+    }
+
+    .img-personagem{
+        margin-top: 25px;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .avaliacao-usuario{
+        flex-direction: column;
+    }
+
+    .img-user{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+    }
+    .info-usuario{
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .content.sinopse{
+        height: max-content;
+    }
+    .content.personagens{
+        height: 60vh;
+    }
+
+    .content.avaliacoes{
+        height: max-content;
+    }
+
+    .avaliacao-usuario{
+        width: 100% !important;
+    }
+    
+    .img-usuario{
+        width: 40%;
+    }
+}
