@@ -4,17 +4,20 @@
     overflow-x: hidden;
 }
 
-/* Estilo do body com modo escuro */
-.bg-dark{
-    color: #f1f1f1;
-    overflow-x: hidden;
-}
+/* Estilo do body modo alto */
 
 .bg-alto{
     background-color: #f21010;
     overflow-x: hidden;
     color:#f1f1f1;    
 }
+
+/* Estilo do body com modo escuro */
+.bg-dark{
+    color: #f1f1f1;
+    overflow-x: hidden;
+}
+
 /* Estilo da Div Header */
 .header{
     background: #090808;
@@ -147,10 +150,13 @@ a.navbar-brand{
 /* Estilo da Div que iria conter o trailer da sinopse */
 .video-sinopse{
     position: relative;
-    max-height: 50%;
-    width: 50%;
     color: #f1f1f1;
-    background: #090808;
+    margin-top: 70px;
+}
+
+.trailer-sinopse{
+    width: 560px;
+    height: 315px;
 }
 
 .imgs-personagens{
@@ -177,6 +183,14 @@ a.navbar-brand{
 .avaliacao-usuario{
     margin-top: 10px;
     margin-bottom: 15px;
+}
+
+.bg-dark .card{
+    background: #343a40;
+}
+
+.bg-alto .card{
+    color: #090808;
 }
 
 .img-user{
@@ -224,12 +238,60 @@ a.navbar-brand{
   } 
 
 /* Estilo a ser usado para responsividade*/
+@media screen and (max-width: 300px){
+    .menu-lateral, .conteudo-principal{
+        position: relative;
+        width: 50%;
+    }
+
+    .nav-img-naipe{
+        width: 119px;
+        height: 150px;
+    }
+
+    .nav.nav.flex-column .nav-item{
+        margin: 15px 0;
+        left: 0;
+    }
+
+    .nav-link{
+        background: #d9d9d9 !important;
+        color: #090808;
+        width: 90% !important;
+        border-radius: 0px !important;
+    }
+
+    .nav-link.active{
+        width: 96% !important;
+        background: #494b4d !important;
+        color: #f1f1f1;
+    }
+
+    .nav.justify-content-between{
+        justify-content: flex-start !important;
+        height: 12%;
+    }
+
+    span.navbar-brand{
+        margin-left: 10px;
+    }
+
+    .btn-danger{
+        padding: 3px 6px;
+        height: auto;
+    }
+
+    form.d-flex.button{
+        padding-left: 56vw;
+    }
+}
+
 @media screen and (max-width: 767.98px){
     .menu-lateral, .conteudo-principal{
         width: 50%;
     }
 
-    .content.sinopse, .content.avaliacoes{
+    .content.sinopse, .content.personagens, .content.avaliacoes{
         position: relative;
         height: max-content !important;
     }
@@ -239,10 +301,14 @@ a.navbar-brand{
     }
 
     .video-sinopse{
-        position: relative;
         max-height: 50%;
+        max-width: 150px
+    }
+
+    .trailer-sinopse{
+        position: relative;
+        height: min-content;
         width: 90%;
-        background: red;
     }
 
     .imgs-personagens{
@@ -277,6 +343,12 @@ a.navbar-brand{
     .content.sinopse{
         height: max-content;
     }
+    
+    .trailer-sinopse{
+        position: relative;
+        max-width: 100%;
+    }
+
     .content.personagens{
         height: 60vh;
     }

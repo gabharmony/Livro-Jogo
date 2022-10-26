@@ -11,11 +11,11 @@
 .bg-dark{
     background: #090809 !important;
     color: #f1f1f1;
-    overflow: auto;
+    overflow: hidden;
 }
 
 span.navbar-brand{
-    margin-right: 80px;
+    margin-right: 5%;
 }
 
 /* Estilo da Div do Conteúdo Principal */
@@ -31,12 +31,13 @@ span.navbar-brand{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
  }
 
 /* Estilo do botão para continuar a ler, que é a nossa setinha pra baixo. */
  .btn-continuar{
-    color: #f1f1f1;
+   background: none;
+   border: none;
+    color: dimgray;
     font-size: 27px;
  }
 
@@ -44,11 +45,23 @@ span.navbar-brand{
     color: #B00000;
  }
 
+.historia-escolha{
+   height: 80vh;
+}
+
+.historia-historia{
+   height: 80vh;
+}
+
+.ident-capitulo{
+   margin-top: 43vh;
+   height: 80vh;
+}
 
  /* Estilo da Div, onde está o botão para continuar */
  .continuar{
-    position: relative;
-    top: 40%;
+    margin-top: 10%;
+    height: 12vh;
  }
 
  /* Estilo da Div onde está a história principal, antes das escolhas no caso */
@@ -59,19 +72,50 @@ span.navbar-brand{
 
  /* Estilo das Divs onde estão os botãos da escolha */
  .decisao{
+    max-height: min-content;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
  }
 
  /* Estilo das Divs onde estão as continuações a depender da escolha  */
  .escolha{
-    text-align: left;
-    position: relative;
+   padding-top: 60px;
+   text-align: left;
+   position: relative;
  }
 
  /* Estilo das Divs onde está o botão para continuar a ler, quando está dentro da continuação após escolha */
  .escolha .continuar{
-    top: 0;
     text-align: center;
+ }
+
+ .btn-escolhaUm{
+   margin-right: 13px;
+ }
+
+ .btn-escolhaDois{
+   padding: 6px 11.98px;
+ }
+
+ .capitulo-1.escolha.escolhaDois .historia-escolha{
+   height: 80vh;
+ }
+
+ .capitulo-1.escolha.escolhaDois .continuar{
+   height: 12vh;
+ }
+
+ @media screen and (max-width: 300px){
+   .historia{
+      padding-top: 80px;
+   }
+
+   .escolha{
+      padding-top: 80px !important;
+      overflow: scroll;
+   }
  }
 
 /* Estilos de responsividade */
@@ -80,8 +124,46 @@ span.navbar-brand{
         overflow: scroll;
     }
 
-    .escolhas{
+    .historia-historia{
+      height: max-content;
+    }
+
+    .escolha{
+        padding-top: 70px;
         margin-bottom: 20px;
+    }
+
+    .decisao{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .capitulo-1.escolhaDois .continuar{
+      text-align: center;
+    }
+ }
+
+ @media screen and (max-height: 741px){
+   .historia-escolha{
+      height: max-content;
+   }
+
+   .escolha{
+      overflow: scroll;
+   }
+
+   .capitulo-1.escolha.escolhaDois{
+      overflow: hidden;  
+    }
+
+    .capitulo-1.escolha.escolhaDois .historia-escolha{
+      height: 80vh;
+    }
+
+    .capitulo-1.escolha.escolhaDois .continuar{
+      margin-top: 0%;
+      height: 12vh;
     }
  }
 
@@ -90,7 +172,47 @@ span.navbar-brand{
         overflow: scroll;
     }
 
-    .escolhas{
-        margin-bottom: 20px;
+    .historia-historia{
+      height: max-content;
     }
+    
+    .historia-escolha{
+      height: max-content ;
+    }
+
+    .continuar{
+      position: relative;
+    }
+
+    .escolha{
+       overflow: scroll;
+    }
+
+    .decisao{
+      display: flex;
+    }
+
+    .escolha .continuar{
+      text-align: center;
+   }
+
+    .btn-escolhaUm{
+      margin-right: 13px;
+    }
+ }
+
+ @media screen and (min-width: 1200px){
+   .continuar{
+      margin-top: 0;
+   }
+ }
+
+ @media screen and (min-height: 801px) and (max-height: 1367px){
+   .continuar{
+      margin-top: 10%;
+   }
+
+   .decisao{
+      margin-top: 10%;
+   }
  }
